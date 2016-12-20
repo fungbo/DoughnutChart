@@ -4,6 +4,7 @@ import {VictoryPie} from 'victory-pie';
 import {VictoryContainer} from 'victory-core';
 import {getRelatedOuList, getDonutChartData, getToday} from './utils';
 import epi from './epi';
+import corsRequest from "./cors-request";
 import {DonutColor} from './config';
 import css from './donut.css';
 
@@ -36,18 +37,17 @@ export default class Donut extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(getRelatedOuList(), {auth: {username: 'wang@qq.com', password: 'Wang1234'}})
+    axios.get(getRelatedOuList())
       .then(response => {
         const ou = response.data['organisationUnits'][0]['id'];
         const epiWeek = epi(getToday());
-        axios.get(getDonutChartData(epiWeek.year, epiWeek.week, ou))
-            .then(response => {
-              this.setState({data: response.data})
-            });
-        }
-      )
+        corsRequest.sendCORSRequest('GET', getDonutChartData(epiWeek.year, epiWeek.week, ou), (res) => {
+          console.log('res', res);
+          this.setState({data: JSON.parse(res)});
+        })
+      })
       .catch();
-  }
+  };
 
   getAllMBesFacilities() {
     let total = 0;
