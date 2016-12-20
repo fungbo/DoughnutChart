@@ -1,0 +1,19 @@
+.total {
+  color: black;
+}
+
+.mBes {
+  color: darkblue;
+}
+
+.completed {
+  color: #84b761;
+}
+
+.incomplete {
+  color: #808184;
+}
+
+.missing {
+  color: #cc4748;
+}
