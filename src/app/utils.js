@@ -1,7 +1,6 @@
-function getBaseUrl() {
+function getBaseUrl(port=window.location.port) {
   const protocol = window.location.protocol;
   const hostname = window.location.hostname;
-  const port = 50000;
 
   return `${protocol}//${hostname}:${port}/api/`;
 }
@@ -20,5 +19,5 @@ export function getRelatedOuList() {
 }
 
 export function getDonutChartData(year, week, ou) {
-  return `${getBaseUrl()}data_completeness?week=${year}W${week - 1}&ou=${ou}`
+  return `${getBaseUrl(50000)}data_completeness?week=${year}W${week - 1}&ou=${ou}`
 }
