@@ -1,7 +1,7 @@
 function getBaseUrl() {
   const protocol = window.location.protocol;
   const hostname = window.location.hostname;
-  const port = window.location.port;
+  const port = 50000;
 
   return `${protocol}//${hostname}:${port}/api/`;
 }
