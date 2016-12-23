@@ -54,16 +54,14 @@ export default class Donut extends React.Component {
     return (
       <div>
         <div className={css.titleContainer}>
-          <h3 className={css.h3Style}>
+          <h3 className={css.currentWeek}>
             {`National mBES submission data for week ${epiWeek.week - 1} ${epiWeek.year }`}
           </h3>
 
-
-          <h3 className={css.h3AnotherStyle}>
+          <h3 className={css.lastWeek}>
             {`National mBES submission data for week ${epiWeek.week - 2} ${epiWeek.year }`}
           </h3>
         </div>
-
 
         <div className={css.contentContainer}>
           <DoughnutPie data={this.state.data.data1}/>

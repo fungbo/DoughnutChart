@@ -6,12 +6,12 @@
   column-count: 4
 }
 
-.h3Style {
+.currentWeek {
   padding-top: 130px;
   padding-left: 100px
 }
 
-.h3AnotherStyle {
+.lastWeek {
   padding-top: 148px;
   padding-left: 100px
 }
