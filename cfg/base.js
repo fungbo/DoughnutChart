@@ -16,7 +16,7 @@ module.exports = {
   devtool: 'eval',
   output: {
     path: path.join(__dirname, '/../dist/assets'),
-    filename: 'app.js',
+    filename: 'donut.js',
     publicPath: defaultSettings.publicPath
   },
   devServer: {

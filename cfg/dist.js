@@ -27,7 +27,7 @@ let config = Object.assign({}, baseConfig, {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('styles.css')
+    new ExtractTextPlugin('donut.css')
   ],
   module: defaultSettings.getDefaultModules()
 });
