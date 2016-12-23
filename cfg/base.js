@@ -25,7 +25,27 @@ module.exports = {
     hot: true,
     port: defaultSettings.port,
     publicPath: defaultSettings.publicPath,
-    noInfo: false
+    noInfo: false,
+    proxy: {
+      '/api/data_completeness': {
+        target: 'https://52.89.85.171:50000',
+        secure: false
+
+      },
+      '/api/indicator': {
+        target: 'https://52.89.85.171:50000',
+        secure: false
+
+      },
+      '/api/*': {
+        target: 'https://52.89.85.171',
+        secure: false
+      },
+      '/dhis-web-commons/*': {
+        target: 'https://52.89.85.171',
+        secure: false
+      }
+    }
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],

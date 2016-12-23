@@ -1,19 +1,17 @@
-.total {
-  color: black;
+.titleContainer {
+  column-count: 2
 }
 
-.mBes {
-  color: darkblue;
+.contentContainer {
+  column-count: 4
 }
 
-.completed {
-  color: #84b761;
+.h3Style {
+  padding-top: 130px;
+  padding-left: 100px
 }
 
-.incomplete {
-  color: #808184;
-}
-
-.missing {
-  color: #cc4748;
+.h3AnotherStyle {
+  padding-top: 148px;
+  padding-left: 100px
 }
